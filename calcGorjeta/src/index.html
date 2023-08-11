@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Calculadora de Gorjetas</title>
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <h1 class="titulo">Calculadora de Gorjetas</h1>
+        </div>
+        <div>
+            <form class="topoForm" id="topoForm">
+                <label for="vlConta">
+                    <p>Quanto ficou a conta?</p>
+                </label>
+                <p>
+                    R$ <input type="number" placeholder="100" name="vlConta" id="vlConta" class="formInput" required>
+                </p>
+                <label for="qltAtendimento">
+                    <p>
+                        Como foi o atendimento?
+                    </p>
+                </label>
+                <p>
+                    <select name="qltAtendimento" id="qltAtendimento" class="formSelect" required>
+                        <option disabled selected value="0">Escolha uma opção:</option>
+                        <option value="0.3">30% - Perfeito</option>
+                        <option value="0.2">20% - Ótimo</option>
+                        <option value="0.15">15% - Muito Bom</option>
+                        <option value="0.1">10% - Bom</option>
+                        <option value="0.05">05% - Ruim</option>
+                    </select>
+                </p>
+                <label for="qtPessoas">
+                    <p>Quantas pessoas vão dividir a conta?</p>
+                </label>
+                <p>
+                    <input type="number" placeholder="1" nome="qtPessoas" id="qtPessoas" class="formInput" required> pessoa(s)
+                </p>
+                <button type="submit" class="formSubmit" id="submit">Calcular</button>
+            </form>
+        </div>
+        <div id="totalGorg">
+            Gorjeta total:
+            R$ <span id="valorGorg">0.00</span>
+            <span id="porPessoa">cada</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>2023 - dev.calc$</p>
+    </footer>
+
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
